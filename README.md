@@ -1,61 +1,340 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# PayFlow - HRIS (Human Resource Information System)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php)](https://php.net)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
+[![Alpine.js](https://img.shields.io/badge/Alpine.js-3.x-8BC34A?style=for-the-badge&logo=alpine.js)](https://alpinejs.dev)
 
-## About Laravel
+PayFlow adalah sistem informasi sumber daya manusia (HRIS) yang dibangun dengan Laravel 12, menggunakan teknologi modern seperti Tailwind CSS, Alpine.js, dan Laravel Breeze. Sistem ini dirancang untuk membantu perusahaan mengelola data karyawan, absensi, penggajian, dan berbagai aspek HR lainnya secara efisien.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 📊 Dashboard
+- **Overview Dashboard**: Ringkasan visual data penting berdasarkan role pengguna
+- **Grafik dan Statistik**: Visualisasi data karyawan, absensi, dan tren HR
+- **Real-time Updates**: Data yang selalu terkini
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🏢 Master Data
+- **Manajemen Perusahaan**: Kelola data perusahaan dan cabang
+- **Departemen**: Organisasi struktur departemen perusahaan
+- **Jabatan**: Manajemen posisi dan level jabatan
+- **Lokasi Kerja**: Pengaturan lokasi kerja multi-cabang
+- **Komponen Gaji**: Konfigurasi komponen gaji (tunjangan, potongan)
+- **Hari Libur**: Kalender hari libur nasional dan perusahaan
 
-## Learning Laravel
+### 👥 Manajemen Karyawan
+- **Database Karyawan**: Profil lengkap karyawan dengan foto
+- **Kontrak Kerja**: Manajemen kontrak dan perpanjangan
+- **Riwayat Kerja**: Tracking perubahan posisi dan gaji
+- **Data Keluarga**: Informasi keluarga untuk keperluan administrasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ⏰ Sistem Absensi
+- **Data Kehadiran**: Tracking absensi harian dengan lokasi
+- **Jadwal Kerja (Shift)**: Manajemen jadwal kerja fleksibel
+- **Koreksi Absensi**: Pengajuan dan persetujuan koreksi absensi
+- **Overtime**: Penghitungan lembur otomatis
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🏖️ Manajemen Cuti
+- **Pengajuan Cuti**: Sistem pengajuan cuti online
+- **Workflow Approval**: Proses persetujuan berlapis
+- **Kuota Cuti**: Tracking sisa cuti per karyawan
+- **Jenis Cuti**: Berbagai tipe cuti (tahunan, sakit, dll)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 💰 Sistem Payroll
+- **Proses Gaji**: Perhitungan gaji otomatis bulanan
+- **Slip Gaji**: Generate slip gaji digital
+- **PPh 21**: Perhitungan pajak penghasilan otomatis
+- **BPJS**: Integrasi perhitungan BPJS Kesehatan & Ketenagakerjaan
+- **Komponen Variabel**: Bonus, insentif, dan potongan
 
-## Laravel Sponsors
+### 🧾 Manajemen Klaim
+- **Reimbursement**: Klaim penggantian biaya
+- **Medical Claims**: Klaim kesehatan
+- **Travel Claims**: Klaim perjalanan dinas
+- **Approval System**: Sistem persetujuan klaim
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📈 Sistem Laporan
+- **Laporan Gaji**: Payroll summary dan detail
+- **Laporan Absensi**: Rekapitulasi kehadiran
+- **Laporan Pajak**: PPh 21 dan pelaporan pajak
+- **Laporan BPJS**: Iuran dan klaim BPJS
+- **Export**: Excel dan PDF export
 
-### Premium Partners
+### 🔐 Employee Self Service (ESS)
+- **Portal Karyawan**: Akses data pribadi
+- **Slip Gaji Digital**: Download slip gaji
+- **Pengajuan Cuti**: Submit cuti online
+- **Klaim Reimburse**: Ajukan klaim penggantian
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Teknologi yang Digunakan
 
-## Contributing
+### Backend
+- **Laravel 12**: Framework PHP modern dengan fitur terbaru
+- **PHP 8.2+**: Dengan fitur-fitur modern PHP
+- **MySQL**: Database utama untuk penyimpanan data
+- **Spatie Permission**: Role dan permission management
+- **Laravel Breeze**: Authentication starter kit
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Frontend
+- **Tailwind CSS 4.0**: Utility-first CSS framework
+- **Alpine.js 3.x**: Lightweight JavaScript framework
+- **Blade Templates**: Laravel templating engine
+- **Dark Mode**: Mendukung tema gelap
 
-## Code of Conduct
+### Packages & Libraries
+- **Spatie Media Library**: File dan media management
+- **Maatwebsite Excel**: Export/import Excel
+- **DomPDF**: Generate PDF documents
+- **Spatie Activity Log**: User activity tracking
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📋 Requirement System
 
-## Security Vulnerabilities
+### Server Requirements
+- **PHP**: 8.2 atau lebih tinggi
+- **Web Server**: Apache/Nginx
+- **Database**: MySQL 8.0+ atau MariaDB 10.3+
+- **Memory**: Minimal 512MB RAM
+- **Storage**: Minimal 1GB free space
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### PHP Extensions
+```
+- BCMath
+- Ctype
+- cURL
+- DOM
+- Fileinfo
+- JSON
+- Mbstring
+- OpenSSL
+- PCRE
+- PDO
+- Tokenizer
+- XML
+- GD atau ImageMagick
+```
 
-## License
+### Node.js Requirements
+- **Node.js**: 18.x atau lebih tinggi
+- **NPM**: 8.x atau lebih tinggi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🔧 Instalasi
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/yourusername/payflow.git
+cd payflow
+```
+
+### 2. Install Dependencies
+```bash
+# Install PHP dependencies
+composer install
+
+# Install Node.js dependencies
+npm install
+```
+
+### 3. Environment Setup
+```bash
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+### 4. Database Configuration
+Edit file `.env` dan sesuaikan konfigurasi database:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=payflow
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+
+### 5. Database Migration & Seeding
+```bash
+# Run migrations
+php artisan migrate
+
+# Seed database with initial data
+php artisan db:seed
+```
+
+### 6. Storage Setup
+```bash
+# Create storage link
+php artisan storage:link
+
+# Set permissions (Linux/Mac)
+chmod -R 755 storage
+chmod -R 755 bootstrap/cache
+```
+
+### 7. Build Assets
+```bash
+# Build for development
+npm run dev
+
+# Build for production
+npm run build
+```
+
+### 8. Start Development Server
+```bash
+# Laravel development server
+php artisan serve
+
+# Vite development server (separate terminal)
+npm run dev
+```
+
+## 👥 Default User Accounts
+
+Setelah seeding database, tersedia akun default:
+
+| Role | Email | Password | Akses |
+|------|-------|----------|-------|
+| Super Admin | admin@payflow.com | password | Full Access |
+| HR Manager | hr@payflow.com | password | HR Management |
+| Finance | finance@payflow.com | password | Payroll & Reports |
+| Employee | employee@payflow.com | password | Self Service |
+
+## 🔐 Role & Permission System
+
+### Role Hierarchy
+1. **Super Admin** - Akses penuh ke semua fitur
+2. **HR Manager** - Manajemen HR dan karyawan
+3. **HR Staff** - Operasional HR terbatas
+4. **Finance** - Fokus payroll dan laporan keuangan
+5. **Employee** - Employee self service
+
+### Permission Categories
+- **Dashboard**: `view_dashboard`
+- **Master Data**: `view_master_data`, `create_company`, `edit_company`, dll
+- **Employee Management**: `view_employees`, `create_employee`, dll
+- **Attendance**: `view_attendance`, `manage_schedules`, dll
+- **Leave Management**: `view_leaves`, `approve_leave`, dll
+- **Payroll**: `view_payroll`, `process_payroll`, dll
+- **Claims**: `view_claims`, `approve_claim`, dll
+- **Reports**: `view_reports`, `export_reports`, dll
+- **Self Service**: `view_own_profile`, `view_own_payslip`, dll
+- **System**: `manage_users`, `manage_roles`, dll
+
+## 📁 Struktur Project
+
+```
+payflow/
+├── app/
+│   ├── Http/Controllers/     # Controllers
+│   ├── Models/              # Eloquent models
+│   ├── Providers/           # Service providers
+│   └── Services/            # Business logic services
+├── database/
+│   ├── migrations/          # Database migrations
+│   ├── seeders/             # Database seeders
+│   └── factories/           # Model factories
+├── resources/
+│   ├── views/               # Blade templates
+│   ├── js/                  # JavaScript files
+│   └── css/                 # CSS files
+├── routes/
+│   ├── web.php              # Web routes
+│   └── api.php              # API routes
+├── public/                  # Public assets
+├── storage/                 # Storage files
+└── config/                  # Configuration files
+```
+
+## 🎨 Customization
+
+### Tema dan Styling
+PayFlow menggunakan Tailwind CSS dengan dukungan dark mode. Untuk kustomisasi:
+
+```bash
+# Edit tailwind.config.js untuk custom colors
+# Edit resources/css/app.css untuk custom styles
+# Rebuild assets
+npm run build
+```
+
+### Menu Navigation
+Menu sistem dikonfigurasi di `app/Providers/MenuServiceProvider.php` dengan:
+- Role-based menu visibility
+- Dynamic submenu generation
+- Active state management
+- Icon support
+
+### Database Schema
+Struktur database dapat disesuaikan dengan kebutuhan:
+- Edit migrations di `database/migrations/`
+- Update models di `app/Models/`
+- Run migration: `php artisan migrate`
+
+## 🔄 Update & Maintenance
+
+### Update Dependencies
+```bash
+# Update PHP dependencies
+composer update
+
+# Update Node.js dependencies
+npm update
+
+# Clear cache
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+```
+
+### Backup Database
+```bash
+# Backup database
+mysqldump -u username -p payflow > backup.sql
+
+# Restore database
+mysql -u username -p payflow < backup.sql
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Permission Denied**
+   ```bash
+   sudo chown -R www-data:www-data storage
+   sudo chown -R www-data:www-data bootstrap/cache
+   ```
+
+2. **Database Connection Error**
+   - Check `.env` database configuration
+   - Verify MySQL service is running
+   - Test connection manually
+
+3. **Assets Not Loading**
+   ```bash
+   npm run build
+   php artisan config:clear
+   ```
+
+4. **Storage Link Issue**
+   ```bash
+   php artisan storage:link
+   ```
+
+## 📞 Support
+
+Untuk bantuan dan support:
+- 📧 Email: support@payflow.com
+- 📱 WhatsApp: +62-xxx-xxx-xxxx
+- 🌐 Website: https://payflow.com
+
+## 📄 License
+
+PayFlow adalah software open source yang dilisensikan under [MIT License](LICENSE).
+
+---
+
+**Dibuat dengan ❤️ untuk memudahkan pengelolaan HR di Indonesia**
